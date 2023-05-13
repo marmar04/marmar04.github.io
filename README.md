@@ -1,3 +1,3 @@
 # Hello world
 
-This is a test for github pages
+This would be the main page where I ramble and blog. Stay tuned for something exciting!
