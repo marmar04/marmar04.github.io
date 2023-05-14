@@ -12,7 +12,7 @@ I started debugging it by starting the `swaylock` command in a tmux session beca
 ```
 
 ## Searching up the solution
-With the help of the error and some good ol' googling, I came across an (issue in github)[https://github.com/swaywm/sway/issues/3631] that has the same problem. The issue stems from a missing file in `/etc/pam.d/swaylock` which I guess is an instruction for the pam module to authenticate the password. It should suffice for one to put the following lines in `/etc/pam.d/swaylock` using any editor of their choosing.
+With the help of the error and some good ol' googling, I came across an [issue in github](https://github.com/swaywm/sway/issues/3631) that has the same problem. The issue stems from a missing file in `/etc/pam.d/swaylock` which I guess is an instruction for the pam module to authenticate the password. It should suffice for one to put the following lines in `/etc/pam.d/swaylock` using any editor of their choosing.
 
 File contents of `/etc/pam.d/swaylock`:
 ```
