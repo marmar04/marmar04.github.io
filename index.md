@@ -1,5 +1,4 @@
 ---
-title: marmar04's homepage
 layout: home
 ---
 # Hello world

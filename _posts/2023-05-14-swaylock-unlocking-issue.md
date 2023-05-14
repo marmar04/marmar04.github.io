@@ -1,9 +1,9 @@
 ---
-title: "Sway unlocking issue"
+title: "swaylock unlocking issue"
 date: 2023-05-14
 ---
 
-# Swaylock unlocking issue
+# swaylock unlocking issue
 
 ## Introduction
 I have setup my hyprland desktop to my liking but between that and a usable experience for me is the screen locking feature. Whenever I `swaylock` in the terminal, I can never get back unless killing the swaylock process due to some arcane reason.
