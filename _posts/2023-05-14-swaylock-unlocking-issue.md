@@ -1,5 +1,5 @@
 ---
-Title: Sway unlocking issue
+title: "Sway unlocking issue"
 date: 2023-05-14
 keywords: [wayland, swaylock, nixos]
 ---
