@@ -1,6 +1,7 @@
 ---
 title: "swaylock unlocking issue"
 date: 2023-05-14
+tags: [hyprland, nixos, problem solving]
 ---
 
 ## Introduction
@@ -23,17 +24,23 @@ auth include login
 While just writing the file directly using vim and rebooting seems like the fastest solution, I wanted to declare in my nixos config so that it creates the file with that contents each time I change laptops. For this we just need an option called `environment.etc` which you might have guessed, creates a file in `/etc`. Here's my configuration for that issue:
 
 ```nix
-  environment = {
-    etc = {
-      "pam.d/swaylock" = {
-        enable = true;
-        text = ''
-          auth include login
-        '';
-      };
-    };
+environment = {
+etc = {
+  "pam.d/swaylock" = {
+    enable = true;
+    text = ''
+      auth include login
+    '';
   };
+};
+};
 ```
 
 Now the only thing left to do is do a `sudo nixos-rebuild boot` and `swaylock` should unlock without problems.
 
+Edit: apparently there seems to be an easier method to do it in NixOS which is through the `security.pam.services` option which is demonstrated below:
+```nix
+security.pam.service = {
+  swaylock = {};
+};
+```
